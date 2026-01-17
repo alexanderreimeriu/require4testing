@@ -56,9 +56,6 @@ require4testing/
 ├── list.html
 └── form.html
 
-yaml
-Code kopieren
-
 ---
 
 ## 🚀 Anwendung starten
@@ -71,13 +68,11 @@ Code kopieren
 
 ### Schritte
 
-```bash
 git clone https://github.com/alexanderreimeriu/require4testing.git
 cd require4testing
 mvn spring-boot:run
 Nach dem Start ist die Anwendung erreichbar unter:
 
 http://localhost:8080/web/requirements
-
 
 Hinweis: Falls Port 8080 belegt ist, wird automatisch ein anderer Port verwendet (z. B. 8081). Der korrekte Port steht in der Konsole.
