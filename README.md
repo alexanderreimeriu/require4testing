@@ -68,11 +68,61 @@ require4testing/
 
 ### Schritte
 
+```bash
 git clone https://github.com/alexanderreimeriu/require4testing.git
 cd require4testing
 mvn spring-boot:run
 Nach dem Start ist die Anwendung erreichbar unter:
 
 http://localhost:8080/web/requirements
-
 Hinweis: Falls Port 8080 belegt ist, wird automatisch ein anderer Port verwendet (z. B. 8081). Der korrekte Port steht in der Konsole.
+
+🧪 Funktionen in der Anwendung
+Anforderungen anzeigen
+
+Neue Anforderung erfassen
+
+Anforderungen bearbeiten
+
+Anforderungen löschen
+
+Entwickler beim Anlegen/Bearbeiten zuordnen
+
+🗃️ Datenbank (H2)
+Die Anwendung verwendet eine In‑Memory‑Datenbank (H2). Sie wird beim Start automatisch geladen.
+
+H2-Konsole
+Erreichbar unter:
+http://localhost:8080/h2-console
+Zugangsdaten:
+
+JDBC-URL: jdbc:h2:mem:testdb
+
+Benutzer: sa
+
+Passwort: (leer lassen)
+
+🖼️ Screenshots / Dokumentation
+(Screenshots der Benutzeroberfläche werden im Anhang der Fallstudie eingefügt.)
+
+📘 Weiterführende Dokumentation
+Diese README ergänzt die schriftliche Fallstudie mit folgenden Inhalten:
+
+Technologiestack und Architekturkonzept
+
+Datenmodell (inkl. Entitäten und Relationen)
+
+UML-Diagramm (Struktur der Anwendung)
+
+Screenshots der Webanwendung
+
+🔖 Autor
+Name: Alexander Reimer
+
+Studiengang: Wirtschaftsinformatik
+
+Modul: IPWA02‑01 – Programmierung von industriellen Informationssystemen
+
+Hochschule: IU Internationale Hochschule
+
+---
