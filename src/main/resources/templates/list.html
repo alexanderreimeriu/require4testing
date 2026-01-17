@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Anforderung bearbeiten</title>
+</head>
+<body>
+<h1>Anforderung bearbeiten / erstellen</h1>
+
+<form th:action="@{/web/requirements/save}" th:object="${requirement}" method="post">
+    <input type="hidden" th:field="*{id}" />
+
+    <label>Titel:</label><br>
+    <input type="text" th:field="*{titel}" required /><br><br>
+
+    <label>Beschreibung:</label><br>
+    <textarea th:field="*{beschreibung}" rows="4" cols="40"></textarea><br><br>
+
+    <label>Status:</label><br>
+    <select th:field="*{status}">
+        <option value="OFFEN">OFFEN</option>
+        <option value="IN_BEARBEITUNG">IN_BEARBEITUNG</option>
+        <option value="ABGESCHLOSSEN">ABGESCHLOSSEN</option>
+    </select><br><br>
+
+    <label>Entwickler:</label><br>
+    <select th:field="*{entwickler.id}">
+        <option th:each="entw : ${entwicklerList}"
+                th:value="${entw.id}"
+                th:text="${entw.name}">Entwickler</option>
+    </select><br><br>
+
+    <button type="submit">Speichern</button>
+</form>
+
+<br>
+<a th:href="@{/web/requirements}">Zurück zur Liste</a>
+</body>
+</html>
